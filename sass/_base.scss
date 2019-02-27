@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+// Fluid Typography.
+$min_width: 320px;
+$max_width: 1800px;
+$min_font: 16px;
+$max_font: 22px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+  font-family: $font-family--sans-serif;
+  font-weight: 100;
+  color: #000;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family--serif;
+  font-weight: 100;
+  line-height: 1.3;
+  margin: .5em 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.43rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-family: $font-family--sans-serif;
+  line-height: 1.6;
+  outline: 0;
+}
+
+a {
+  color: $brand-color;
+}
+
+.l-container {
+  width: 84vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-vertical-space {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.l-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.u-centered {
+  text-align: center;
+}
+

@@ -1,0 +1,15 @@
+.blogpost {
+  &__link {
+    @include title-link;
+    display: inline-block;
+    margin: 1rem 0;
+  }
+
+  &__byline {
+    @include byline-link;
+  }
+
+  &__pipe {
+    margin: 0 1em;
+  }
+}

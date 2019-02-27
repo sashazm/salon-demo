@@ -1,0 +1,20 @@
+.why-choose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  padding: 6rem;
+}
+
+.why-choose__image {
+  box-shadow: 2rem 2rem $gray;
+  margin-bottom: 2em;
+}
+
+.why-choose__list {
+  @include reset-list();
+  margin: 2em 0;
+
+  li {
+    margin: 1em 0;
+  }
+}

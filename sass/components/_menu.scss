@@ -1,0 +1,38 @@
+.menu {
+  @include reset-list();
+  display: flex;
+  justify-content: flex-end;
+
+  &__link {
+    padding: .5em 1em;
+    display: block;
+    color: $black;
+    // Button overrides
+    background: none;
+    border: 0;
+
+    &:hover {
+      border-bottom: 2px solid $black;
+    }
+  }
+
+  &--active {
+    border-bottom: 2px solid $brand-color;
+  }
+
+  &--push {
+    padding-right: 1em;
+  }
+
+  &--alt {
+    justify-content: center;
+
+    .menu__link:hover {
+      border-color: $brand-color;
+    }
+
+    .menu--active {
+      color: $brand-color;
+    }
+  }
+}

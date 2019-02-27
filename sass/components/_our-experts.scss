@@ -1,0 +1,55 @@
+.experts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1.5fr 1fr;
+  grid-gap: 2rem;
+  margin: 8rem auto;
+
+  &__background {
+    margin-left: -8vw;
+    margin-right: -8vw;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-color: $light-blue;
+    background-image: url("../images/photos/14.png");
+    background-repeat: no-repeat;
+    background-position: 20% 0;
+    background-size: 40%;
+  }
+
+  &__teaser {
+    grid-column: 2;
+    grid-row: 1 / 2;
+    margin: 4rem 0 0 0;
+    z-index: 1;
+  }
+
+  &__award-wrapper {
+    margin: 3rem 0;
+  }
+
+  //space between award icons
+  &__award {
+    margin-right: 2rem;
+  }
+
+  &__overlap {
+    grid-column: 1/ span 2;
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    z-index: 2;
+}
+
+  .single-expert {
+    filter: grayscale(100%);
+    border: 2px solid $gray;
+
+    &__text {
+      margin: 2rem 2.5rem;
+    }
+  }
+}
+

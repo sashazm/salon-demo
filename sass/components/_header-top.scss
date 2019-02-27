@@ -1,0 +1,18 @@
+.header-top {
+  background-color: $black;
+  color: $white;
+  padding: .5em 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__info {
+    justify-self: end;
+  }
+
+  &__pipe {
+    margin: 1em;
+  }
+}

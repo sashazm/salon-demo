@@ -1,0 +1,21 @@
+.welcome-banner {
+  display: flex;
+  align-items: center;
+  height: 45vw;
+  background-image: url("../images/photos/16.jpg");
+  background-size: cover;
+  font-size: 1.5rem;
+
+  &__container {
+    width: 60%;
+  }
+
+  &__title {
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+
+  &__text {
+    font-size: 1em;
+  }
+}

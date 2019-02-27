@@ -1,0 +1,28 @@
+.header-main {
+  padding: 2em 0;
+}
+
+.header-main__container {
+  display: grid;
+  grid-template-areas: "logo navigation";
+  grid-template-columns: 1fr 7fr;
+  align-items: center;
+}
+
+.header-main__nav {
+  grid-area: navigation;
+  display: grid;
+  grid-template-columns: 7fr 5em 1fr;
+  //justify-items: end;
+  align-items: center;
+}
+
+.header-main__cart {
+  justify-self: center;
+  color: $black;
+}
+
+.header-main__booking {
+  justify-self: end;
+}
+

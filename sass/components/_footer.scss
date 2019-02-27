@@ -1,0 +1,32 @@
+.footer {
+  display: grid;
+  grid-template-areas: "copyright opening-times contact";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer__title {
+  font-size: 1.43rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.footer__left {
+  grid-area: copyright;
+  padding-right: 6rem;
+}
+
+.footer__middle {
+  grid-area: opening-times;
+  align-items: start;
+  justify-self: center;
+
+}
+
+.footer__right {
+  grid-area: contact;
+  justify-self: end;
+  align-self: start;
+  align-content: start;
+  padding-left: 6rem;
+}

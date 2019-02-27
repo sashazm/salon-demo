@@ -1,0 +1,11 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3%;
+
+  &__box {
+    border: 2px solid $gray;
+    padding: 3.5em 2em;
+    text-align: center;
+  }
+}

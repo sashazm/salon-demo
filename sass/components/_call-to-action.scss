@@ -1,0 +1,15 @@
+.call-to-action {
+  background-image: url("../images/photos/cta.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  &__text {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__button {
+    margin-right: 1rem;
+  }
+}

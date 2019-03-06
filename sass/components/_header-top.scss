@@ -1,18 +1,50 @@
+// This is the breakpoint width when moving to a horizontal display.
+$header-top-bp: 751px;
+
 .header-top {
   background-color: $black;
   color: $white;
-  padding: .5em 0;
+  padding-bottom: .5rem;
+  text-align: center;
+
+  @include breakpoint($small-width) {
+    padding-bottom: 0;
+    text-align: left;
+  }
 
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: .5rem 0;
+
+    @include breakpoint($small-width) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      white-space: nowrap;
+    }
   }
 
   &__info {
-    justify-self: end;
+    @include breakpoint($small-width) {
+      justify-self: end;
+      text-align: right;
+    }
+
+    @include breakpoint($header-top-bp) {
+      display: flex;
+    }
+  }
+
+  &__time,
+  &__phone-number {
+    margin: 0;
   }
 
   &__pipe {
-    margin: 1em;
+    display: none;
+
+    @include breakpoint($header-top-bp) {
+      margin: 1rem;
+      display: inline;
+    }
   }
 }

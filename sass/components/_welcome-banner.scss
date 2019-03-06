@@ -1,22 +1,44 @@
 .welcome-banner {
   display: flex;
-  align-items: center;
-  height: 45vw;
-  background-image: url("../images/photos/16.jpg");
-  background-size: cover;
-  font-size: 1.5rem;
+  background-color: #dad7d0;
+  padding: 4rem 0;
+
+  @include breakpoint($small-width) {
+    background-image: url("../images/photos/16.jpg");
+    background-size: cover;
+    background-position: 60%;
+  }
+
+  @include breakpoint($medium-width) {
+    font-size: 1.5rem;
+    padding-top: 8rem;
+  }
 
   &__container {
-    width: 60%;
+    @include breakpoint($small-width) {
+      width: 60%;
+    }
   }
 
   &__title {
     font-size: 2.5em;
-    line-height: 1.2;
+
+    @include breakpoint($small-width) {
+      font-size: 2em;
+    }
+
+    @include breakpoint($big-width) {
+      font-size: 2.5em;
+      line-height: 1.2;
+    }
   }
 
   &__text {
-    font-size: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
+
+    @include breakpoint($big-width) {
+      font-size: 1em;
+      margin-bottom: 2em;
+    }
   }
 }

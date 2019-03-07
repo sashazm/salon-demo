@@ -7,7 +7,7 @@ $header-top-bp: 751px;
   padding-bottom: .5rem;
   text-align: center;
 
-  @include breakpoint($small-width) {
+  @include breakpoint($bp-small) {
     padding-bottom: 0;
     text-align: left;
   }
@@ -16,7 +16,7 @@ $header-top-bp: 751px;
     align-items: center;
     padding: .5rem 0;
 
-    @include breakpoint($small-width) {
+    @include breakpoint($bp-small) {
       display: grid;
       grid-template-columns: 1fr 2fr;
       white-space: nowrap;
@@ -24,7 +24,7 @@ $header-top-bp: 751px;
   }
 
   &__info {
-    @include breakpoint($small-width) {
+    @include breakpoint($bp-small) {
       justify-self: end;
       text-align: right;
     }

@@ -71,7 +71,7 @@ a {
   margin-left: auto;
   margin-right: auto;
 
-  @include breakpoint($big-width) {
+  @include breakpoint($bp-big) {
     width: 84vw;
   }
 }
@@ -81,7 +81,7 @@ a {
   margin-top: $vertical-space--min;
   margin-bottom: $vertical-space--min;
 
-  @include breakpoint($big-width) {
+  @include breakpoint($bp-big) {
     margin-top: $vertical-space;
     margin-bottom: $vertical-space;
   }
@@ -92,7 +92,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 
-  @include breakpoint($medium-width) {
+  @include breakpoint($bp-medium) {
     grid-gap: 2rem;
   }
 }

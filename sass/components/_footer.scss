@@ -1,32 +1,42 @@
 .footer {
-  display: grid;
-  grid-template-areas: "copyright opening-times contact";
-  grid-template-columns: 1fr 1fr 1fr;
+  @include breakpoint($bp-medium) {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "copyright copyright"
+    "opening-times contact";
+  }
+
+  @include breakpoint($bp-big) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "copyright opening-times contact";
+  }
 }
 
+// Separation between titles and text
 .footer__title {
-  font-size: 1.43rem;
-  font-weight: 500;
-  margin-top: 0;
+  margin-top: 3rem;
   margin-bottom: 2rem;
+
+  @include breakpoint($bp-medium) {
+    margin-top: 0;
+  }
 }
 
-.footer__left {
+.footer__copyright {
   grid-area: copyright;
-  padding-right: 6rem;
 }
 
-.footer__middle {
+.footer__opening-times {
   grid-area: opening-times;
-  align-items: start;
-  justify-self: center;
 
+  @include breakpoint($bp-big) {
+    justify-self: center;
+  }
 }
 
-.footer__right {
+.footer__contact {
   grid-area: contact;
-  justify-self: end;
-  align-self: start;
-  align-content: start;
-  padding-left: 6rem;
+  justify-self: center;
 }

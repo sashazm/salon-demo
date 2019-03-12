@@ -12,7 +12,7 @@ html {
 $min_width: 320px;
 $max_width: 1800px;
 $min_font: 16px;
-$max_font: 22px;
+$max_font: 20px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);

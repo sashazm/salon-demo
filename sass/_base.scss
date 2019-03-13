@@ -87,13 +87,19 @@ a {
   }
 }
 
-.l-3col {
+.l-3col-max {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
 
   @include breakpoint($bp-medium) {
     grid-gap: 2rem;
+  }
+
+  @include breakpoint($bp-medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($bp-big) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

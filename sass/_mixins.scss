@@ -50,3 +50,13 @@
     margin-right: -$size;
   }
 }
+
+@mixin color-mask($color: #fff) {
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: $color;
+}

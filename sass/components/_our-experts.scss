@@ -1,51 +1,132 @@
 .experts {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 1.5fr 1fr;
-  grid-gap: 2rem;
-  margin: 8rem auto;
 
+  @include breakpoint($bp-medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-gap: 2rem;
+  }
+
+  @include breakpoint($bp-big) {
+    grid-row-gap: 0;
+  }
+
+  // Background Image Container
   &__background {
-    margin-left: -8vw;
-    margin-right: -8vw;
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
+    @include container-blowout();
+    position: relative;
     background-color: $light-blue;
-    background-image: url("../images/photos/14.png");
-    background-repeat: no-repeat;
-    background-position: 20% 0;
-    background-size: 40%;
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    // Setting that allows to have background color and image layered over each other.
+    @include breakpoint($bp-medium) {
+      grid-column: 1 / 3;
+      height: 70%;
+    }
+
+    // settings for background color and image
+    &:after {
+      content: '';
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+
+      @include breakpoint($bp-medium) {
+        background-image: url("../images/photos/14.png");
+        background-repeat: no-repeat;
+        background-position: -10% 0;
+        background-size: 60%;
+        // making image lighter in medium size view
+        opacity: .3;
+      }
+
+      @include breakpoint($bp-big) {
+        background-position: 20% 0;
+        background-size: 40%;
+        // Setting opacity back to default
+        opacity: 1;
+      }
+    }
   }
 
   &__teaser {
-    grid-column: 2;
+    justify-self: center;
+    grid-column: 1;
     grid-row: 1 / 2;
-    margin: 4rem 0 0 0;
+    // z-index insures that text is on top of the background
     z-index: 1;
+    margin-bottom: 2rem;
+
+    @include breakpoint($bp-medium) {
+      grid-column: 1 / 3;
+    }
+
+    @include breakpoint($bp-big) {
+      grid-column: 2 / 3;
+      text-align: initial;
+      margin: 4rem 0 0;
+    }
   }
 
   &__award-wrapper {
-    margin: 3rem 0;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+
+    @include breakpoint($bp-big) {
+      justify-content: start;
+      margin-top: 3rem;
+    }
   }
 
   //space between award icons
   &__award {
-    margin-right: 2rem;
+    margin-right: 1rem;
+
+    @include breakpoint($bp-medium) {
+      margin-right: 2rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
+  // Hairdresser profiles
   &__overlap {
-    grid-column: 1/ span 2;
-    grid-row: 2 / 4;
+    // layout of the Profiles area
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-    justify-content: center;
     z-index: 2;
-}
+    margin-bottom: 1em;
 
+    @include breakpoint($bp-medium) {
+      // Positioning within the main Experts grid
+      grid-column: 1 / span 2;
+      // Repositioning of the profiles area
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($bp-big) {
+      // Repositioning within the main Experts grid
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 3rem;
+    }
+  }
+
+  // Settings for content within Hairdresser's profile
   .single-expert {
     filter: grayscale(100%);
     border: 2px solid $gray;
+    background-color: $white;
+    justify-self: center;
 
     &__text {
       margin: 2rem 2.5rem;

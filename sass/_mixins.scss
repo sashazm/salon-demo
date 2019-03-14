@@ -37,3 +37,16 @@
     }
   }
 }
+
+// Use a negative margin to explode out of the .l-container.
+@mixin container-blowout() {
+  $size: (100vw - $container) / 2;
+  margin-left: -$size;
+  margin-right: -$size;
+
+  @include breakpoint($bp-big) {
+    $size: (100vw - $container--big) / 2;
+    margin-left: -$size;
+    margin-right: -$size;
+  }
+}

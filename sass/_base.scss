@@ -67,12 +67,12 @@ a {
 }
 
 .l-container {
-  width: 90vw;
+  width: $container;
   margin-left: auto;
   margin-right: auto;
 
   @include breakpoint($bp-big) {
-    width: 84vw;
+    width: $container--big;
   }
 }
 

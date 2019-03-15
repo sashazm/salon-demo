@@ -1,11 +1,17 @@
 //grid container
 .portfolio {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 5rem;
 
+  @include breakpoint($bp-medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint($bp-big) {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 //grid cell
@@ -13,7 +19,6 @@
   display: grid;
   background: $dark-black;
   overflow: hidden;
-
 }
 
 //cell overlay
@@ -28,18 +33,25 @@
   grid-row: 1;
   grid-column: 1;
   opacity: 1;
-  align-self: stretch;
+  margin-bottom: -1rem;
 }
 
 .portfolio__image:hover {
   opacity: .3;
   transition: all .5s;
   transform: scale(1.2);
-  }
+}
 
 .image-featured {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  @include breakpoint($bp-medium) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  @include breakpoint($bp-big) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
 }
 
 //hover settings

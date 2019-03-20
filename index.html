@@ -45,9 +45,20 @@
       <!-- Logo -->
       <a href="/"><img src="images/logo.png" alt="Company Logo" class="header-main__logo"/></a>
 
+      <!-- Nav Main Toggle -->
+      <div class="nav-toggle js-main-nav-toggle">
+        <span class="nav-toggle__icon"></span>
+      </div>
+
       <!-- Nav Start -->
       <nav class="header-main__nav">
-        <ul class="menu menu--push">
+
+        <!-- Mobile Menu Toggle -->
+        <div class="nav-toggle nav-toggle--active js-menu-toggle">
+          <span class="nav-toggle__icon"></span>
+        </div>
+
+        <ul class="menu menu--main menu--push">
           <li><a href="/" class="menu__link menu--active">Home</a></li>
           <li><a href="/page.html" class="menu__link">Pages</a></li>
           <li><a href="#" class="menu__link">Portfolio</a></li>
@@ -504,7 +515,7 @@
   </div>
 </footer>
 <!-- Footer Area End -->
-
+<script src="/dist/scripts.js"></script>
 </body>
 
 </html>

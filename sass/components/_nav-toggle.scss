@@ -1,0 +1,21 @@
+.nav-toggle {
+  justify-self: flex-end;
+  cursor: pointer;
+  //transition: all 0.3s;
+  //display: inline-block;
+  //position: relative;
+  @include breakpoint($bp-nav-big) {
+    display: none;
+  }
+}
+.nav-toggle__icon {
+  @include burger(25px, 3px, 5px, $dark-gray);
+
+  .nav-toggle--active & {
+    @include burger-to-cross;
+  }
+}
+
+.js-menu-toggle {
+  margin: 1rem;
+}

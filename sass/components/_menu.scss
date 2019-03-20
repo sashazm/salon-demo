@@ -7,7 +7,7 @@
   // display: none;
   cursor: pointer;
   display: flex;
-  //justify-content: flex-end;
+  justify-content: flex-end;
   align-content: center;
 
   &__link {
@@ -40,8 +40,7 @@
   // Main menu overrides
   &--main {
     background-color: #ebebeb;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: block;
 
     @include breakpoint($bp-nav-big) {
       display: flex;
@@ -57,18 +56,19 @@
 
       @include breakpoint($bp-nav-big) {
         border-bottom: initial;
-        padding: .5em 1em;
+        padding: .5em .75em;
       }
 
       &:hover {
+        background-color: rgba(191, 169, 90, 0.3);
         color: $black;
-        border-bottom: 2px solid $brand-color;
+        border-bottom: 1px solid $brand-color;
       }
     }
 
     .menu--active {
       background-color: rgba(191, 169, 90, 0.3);
-      border-bottom: 2px solid $brand-color;
+      border-bottom: 1px solid $brand-color;
 
       @include breakpoint($bp-nav-big) {
         background-color: initial;

@@ -16,13 +16,12 @@
     }
   }
 
-  // Positioning of '_menu' element within the '-header-main' component, for styling go to '_menu'
   &__nav {
     // Mobile
     z-index: 3;
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -100%; // Pulls off canvas to the left.
     height: 100vh;
     display: grid;
     grid-auto-rows: min-content;
@@ -45,7 +44,7 @@
     }
 
     &--active {
-      left: 0;
+      left: 0; // Push back onto canvas.
     }
   }
 
@@ -53,7 +52,6 @@
   &__cart {
     // Mobile
     grid-row: 2; // when toggle is present
-    display: inline-block;
     justify-self: start;
     padding: 0 0 1rem 20px;
     color: $black;
@@ -73,7 +71,6 @@
     grid-row: 4; // when toggle is present
 
     @include breakpoint($bp-nav-big) {
-      display: inline-block;
       justify-self: end;
       grid-row: 1;
       grid-column: 3;

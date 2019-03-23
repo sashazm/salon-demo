@@ -1,0 +1,14 @@
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    line-height: .7;
+  }
+}

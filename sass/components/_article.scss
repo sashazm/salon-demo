@@ -1,8 +1,21 @@
 .article {
 
   &__title {
-    margin: 2rem auto;
+    margin: auto;
     text-align: center;
+    margin-bottom: 3rem;
+
+    @include breakpoint($bp-large) {
+      max-width: 80%;
+    }
+
+    &-text {
+      font-size: 1.7rem;
+
+      @include breakpoint($bp-large) {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   &__byline {
@@ -10,37 +23,61 @@
   }
 
   &__image {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
   &__2col {
-    display: grid;
-    margin-top: 3rem;
-    grid-template-columns: 10% 1fr;
-    grid-column-gap: 3rem;
-    align-content: start;
-    justify-items: center;
+    @include breakpoint($bp-medium) {
+      margin-top: 2rem;
+      display: grid;
+    }
+
+    @include breakpoint($bp-large) {
+      padding: 0 4rem;
+    }
+
+    @include breakpoint(1200px) {
+      padding: 0 8rem;
+    }
   }
 
-  &__text--indented {
-    padding-left: 3rem;
+  &__body {
+    grid-row: 1 / 2;
 
-    .drop-cap {
-      color: $darkest-gray;
-      float: left;
-      font-size: 50px;
-      font-weight: 800;
-      line-height: 40px;
-      padding-top: 4px;
-      margin-left: -3rem;
+    &--indented {
+      @include breakpoint($bp-medium) {
+        padding-left: 5rem;
+      }
+    }
+  }
+
+
+
+  .drop-cap {
+    color: $darkest-gray;
+    float: left;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 40px;
+    padding: 4px;
+
+    @include breakpoint($bp-medium) {
+      font-size: 70px;
+      padding: .75rem;
     }
   }
 }
 
-
 .social-media--vertical {
-  @include vertical;
-  margin-top: .8rem;
+  margin: 1rem 0;
+
+  @include breakpoint($bp-medium) {
+    @include vertical;
+    grid-row: 1 / 2;
+    margin-right: -4rem;
+    padding-left: 1rem;
+  }
 
   .social-icon {
     margin: .3rem 0;

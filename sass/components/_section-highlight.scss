@@ -6,4 +6,9 @@
   @include breakpoint($bp-big) {
     padding: $vertical-space 0;
   }
+
+  &--alt {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
 }

@@ -1,7 +1,12 @@
 .author {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
+
+  @include breakpoint($bp-small) {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__info {
     display: flex;
@@ -10,5 +15,10 @@
 
   &__name {
     line-height: .7;
+  }
+
+  &__social-media {
+    display: flex;
+    flex-flow: row wrap;
   }
 }

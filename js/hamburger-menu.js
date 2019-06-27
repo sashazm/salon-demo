@@ -1,23 +1,25 @@
 // To Target The Hamburger Main Toggle
-const navToggle = document.querySelector('.js-main-nav-toggle');
-const menu = document.querySelector('.header-main__nav');
-const menuToggle = document.querySelector('.js-menu-toggle');
+const navToggle = document.querySelector(".js-main-nav-toggle");
+const menu = document.querySelector(".header-main__nav");
+const menuToggle = document.querySelector(".js-menu-toggle");
 
-// Class names.
-const classMainActive = 'header-main__nav--active';
-const classToggleActive = 'nav-toggle--active';
+// css class names.
+// causes the mobile menu show up
+const classMainActive = "header-main__nav--active";
+// cause the hamburger menu icon to be "X"
+const classToggleActive = "nav-toggle--active";
 
 // Event listener to change toggle state icon
-navToggle.addEventListener('click', toggleStatus);
-menuToggle.addEventListener('click', hideMenu)
+navToggle.addEventListener("click", toggleStatus);
+menuToggle.addEventListener("click", hideMenu);
 
 // // function to switch between toggle states
-function toggleStatus () {
-  toggleNavClass()
-  toggleMenu()
+function toggleStatus() {
+  toggleNavClass();
+  toggleMenu();
 }
 
-function toggleNavClass () {
+function toggleNavClass() {
   if (navToggle.className.includes(classToggleActive)) {
     navToggle.classList.remove(classToggleActive);
   } else {
@@ -26,7 +28,7 @@ function toggleNavClass () {
 }
 
 // to slide the side menu open and closed
-function toggleMenu () {
+function toggleMenu() {
   if (menu.className.includes(classMainActive)) {
     menu.classList.remove(classMainActive);
   } else {

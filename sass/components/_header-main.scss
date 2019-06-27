@@ -21,14 +21,14 @@
     z-index: 3;
     position: fixed;
     top: 0;
-    left: -100%; // Pulls off canvas to the left.
+    left: -110%; // Pulls off canvas to the left.
     height: 100vh;
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: 320px;
     overflow: hidden scroll;
     background-color: #fffefa;
-    transition: left .5s;
+    transition: left 0.5s;
 
     @include breakpoint($bp-nav-big) {
       grid-area: navigation;
@@ -42,7 +42,6 @@
       width: initial;
       height: initial;
       background-color: $white;
-
     }
 
     &--active {

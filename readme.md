@@ -5,3 +5,8 @@ Template Author URI: https://colorlib.com/wp/template/akame/
 
 Headings: "Playfair Display", serif;
 Paragraph: "Open Sans", sans-serif;
+
+## compile css and js
+```
+$ npm start
+```

@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
-    "ucd-theme-tasks": "^2.0.4"
+    "ucd-theme-tasks": "^4.0.1"
   },
   "scripts": {
     "start": "gulp",
